@@ -1,0 +1,8 @@
+﻿@model FirebaseMessageMvc.Models.LoginModel
+<form asp-controller="Home" asp-action="Login" method="post" >
+    <div class="form-group">
+        <label>Kullanıcı Adı Giriniz</label>
+        <input asp-for="@Model.UserName" name="UserName" placeholder="Kullanıcı Adı" required />
+        <button class="btn btn-primary" type="submit">Giriş</button>
+    </div>
+</form>

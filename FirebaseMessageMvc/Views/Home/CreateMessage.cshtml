@@ -1,0 +1,31 @@
+﻿@model FirebaseMessageMvc.Models.Message
+
+@*<form asp-controller="Home" asp-action="CreateMessage" method="post" style="margin-left: 1%; margin-right: 1%;" enctype="multipart/form-data">
+
+    <div class="form-group row">
+        <label asp-for="Data" class="col-sm-2 col-form-label"></label>
+        <div class="col-md-10">
+            <textarea rows="2" v cols="40" name="Data" required></textarea>
+            <span asp-validation-for="Data" class="text-danger"></span>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>*@
+
+    <input id="userInput" value="@Model.UserName" hidden />
+    <div class="form-control">
+    <textarea rows="2" cols="40" id="messageInput" name="Data" required></textarea>
+    </div>
+    <div class="form-control">
+    <button class="btn btn-primary" id="sendButton">Gönder</button>
+    </div>
+
+    <div class="row">
+    <div class="col-6">&nbsp;</div>
+    <div class="col-6">
+        <ul id="messagesList"></ul>
+    </div>
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
